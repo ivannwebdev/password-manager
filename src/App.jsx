@@ -3,7 +3,7 @@ import { Login } from 'pages/Login'
 import { Registration } from 'pages/Registration'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import 'app.css'
+import 'App.css'
 import { Layout } from 'antd'
 import { Navbar } from 'components/Navbar'
 
