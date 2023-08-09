@@ -15,7 +15,7 @@ const LoginForm = () => {
 
   return (
     <Form>
-      {error && <div style={{ color: 'red', fontSize: 15, marginLeft: 50}}>{error}</div>}
+      {error && <div style={{ color: 'red', fontSize: 15, marginLeft: 50 }}>{error}</div>}
 
       <Form.Item label='Name'>
         <Input

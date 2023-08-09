@@ -20,6 +20,9 @@ const dataSlice = createSlice({
     setPasswords: (state, action) => {
       const username = action.payload
       const users = getUsers()
+
+      if (!Object.keys(users).length) return
+
       const passwords = users[username].passwords
       state.passwords = passwords
     },

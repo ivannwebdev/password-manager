@@ -9,6 +9,7 @@ const PasswordForm = () => {
   const password = useSelector(dataSelectors.password)
   const error = useSelector(dataSelectors.error)
   const { setEventName, setEventPassword, createPassword } = useActions()
+  console.log('PassForm')
 
   return (
     <Form>

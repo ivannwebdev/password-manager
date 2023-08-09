@@ -24,17 +24,18 @@ const authSlice = createSlice({
       const users = getUsers()
       const isAuth = users[state.loginName]?.password === state.loginPassword
 
-      if (isAuth) {
-        setCurrentUserName(state.loginName)
-        state.auth = true
-        state.name = state.loginName
-        state.error = ''
-        state.loginName = ''
-        state.loginPassword = ''
-      } else {
+      if (!isAuth) {
         state.error = 'Wrong username or password'
+
+        return
       }
 
+      setCurrentUserName(state.loginName)
+      state.auth = true
+      state.name = state.loginName
+      state.error = ''
+      state.loginName = ''
+      state.loginPassword = ''
     },
     logout: (state) => {
       state.auth = false
